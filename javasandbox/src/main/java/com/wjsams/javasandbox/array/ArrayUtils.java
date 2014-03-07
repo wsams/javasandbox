@@ -1,6 +1,7 @@
 package com.wjsams.javasandbox.array;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ArrayUtils {
@@ -25,6 +26,25 @@ public class ArrayUtils {
         for (List<String> setOfCats : allSetsOfCats) {
             System.out.println("setOfCats: " + setOfCats);
         }
+
+        List<String> audiences = new ArrayList<>();
+        audiences.add("audience1");
+        audiences.add("audience2");
+        audiences.add("audience3");
+        audiences.add("audience4");
+        audiences.add("audience5");
+        audiences.add("audience6");
+        audiences.add("audience7");
+        audiences.add("audience8");
+        audiences.add("audience9");
+        audiences.add("audience10");
+        audiences.add("audience11");
+        Collections.sort(audiences);
+        List<List<String>> allSetsOfAudiences = ArrayUtils.getAllSubsets(audiences);
+        for (List<String> setOfAudiences : allSetsOfAudiences) {
+            System.out.println("setOfAudiences: " + setOfAudiences);
+        }
+        System.out.println("There were " + allSetsOfAudiences.size() + " subsets of " + audiences.size() + " audiences.");
     }
 
     private static List<List<String>> getAllSubsets(List<String> set) {

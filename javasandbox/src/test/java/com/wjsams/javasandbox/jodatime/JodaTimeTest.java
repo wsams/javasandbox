@@ -1,5 +1,8 @@
 package com.wjsams.javasandbox.jodatime;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import org.joda.time.DateTime;
 import org.junit.After;
 import org.junit.Before;
@@ -33,6 +36,9 @@ public class JodaTimeTest {
         DateTime t = new DateTime();
         LOGGER.debug("Day of month: {}", t.getDayOfMonth());
         LOGGER.debug("Four months ago: {}", t.minusMonths(new Integer(4)).getMonthOfYear());
+
+        List<String> test = null;
+        Set<String> testy = new HashSet<>(test);
     }
 
 }
